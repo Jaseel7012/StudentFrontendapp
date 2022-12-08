@@ -7,6 +7,8 @@ import { AppComponent } from './app.component';
 import { StudentAddComponent } from './student-add/student-add.component';
 import { ViewStudentComponent } from './view-student/view-student.component';
 import { SearchComponent } from './search/search.component';
+import { FormsModule } from '@angular/forms';
+import { NavbarappComponent } from './navbarapp/navbarapp.component';
 
 const myroute:Routes=[
   {
@@ -16,6 +18,9 @@ const myroute:Routes=[
   },{
     path:'view',
     component:ViewStudentComponent
+  },{
+    path:'search',
+    component:SearchComponent
   }
 ]
 @NgModule({
@@ -23,12 +28,14 @@ const myroute:Routes=[
     AppComponent,
     StudentAddComponent,
     ViewStudentComponent,
-    SearchComponent
+    SearchComponent,
+    NavbarappComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(myroute)
+    RouterModule.forRoot(myroute),
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -6,5 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./student-add.component.css']
 })
 export class StudentAddComponent {
+  name=""
+  rollno=""
+  clg=""
+  read=()=>{
+    let data={
+      "name":this.name,
+      "rollno":this.rollno,
+      "clg":this.clg
+    }
+    console.log(data);
+  }
+
 
 }
