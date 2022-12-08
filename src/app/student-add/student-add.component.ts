@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ApiStudentService } from '../api-student.service';
+import { StudentApiService } from '../student-api.service';
 
 @Component({
   selector: 'app-student-add',
@@ -10,7 +11,7 @@ export class StudentAddComponent {
   name=""
   rollno=""
   clg=""
-  constructor(private api:ApiStudentService){}
+  constructor(private api:StudentApiService){}
   read=()=>{
     let data={
       "name":this.name,
