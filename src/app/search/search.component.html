@@ -5,10 +5,21 @@
             <div class="row g-3">
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                     <label for="" class="form-label">Roll Number</label>
-                    <input type="text" class="form-control">
+                    <input type="text" name="rollno" [(ngModel)]="rollno" class="form-control">
                 </div>
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-                    <button class="btn btn-success float-end">Search</button>
+                    <button class="btn btn-success float-end" (click)="read()">Search</button>
+                </div>
+                <div class="row" *ngFor="let i of search">
+                    <div class="col col-12 col-sm-12 col-lg-6 col-xl-6">
+                        <label for="" class="form-label">Name</label>
+                        <input class="form-control" value="{{i.name}}">
+                    </div>
+                    <div class="col col-12 col-sm-12 col-lg-6 col-xl-6">
+                        <label for="" class="form-label">COLLEGE</label>
+                        <input type="text" class="form-control"  value="{{i.clg}}">
+
+                    </div>
                 </div>
             </div>
         </div>
