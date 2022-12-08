@@ -10,17 +10,17 @@
                             
                             <th scope="col">Roll Number</th>
                             <th scope="col">Name</th>
-                            <th scope="col">Admission Number</th>
+                           
                             <th scope="col">College Name</th>
                           </tr>
                         </thead>
                         <tbody>
-                          <tr >
+                          <tr *ngFor="let i of data" >
                             
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <td>{{i.rollno}}</td>
+                            <td>{{i.name}}</td>
+                            
+                            <td>{{i.clg}}</td>
                            
                           </tr>
                           
